@@ -1,8 +1,12 @@
 import styles from './App.module.scss';
+import NavBar from './components/NavBar/NavBar';
 
 const App = () => {
   return (
-    <p className={styles.para}>App works</p>
+    <>
+      <NavBar />
+      <p className={styles.para}>App works</p>
+    </>
   );
 }
 
