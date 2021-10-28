@@ -1,11 +1,20 @@
 import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
+import BeerCard from './components/BeerCard/BeerCard';
 
 const App = () => {
   return (
     <>
       <NavBar />
-      <p className={styles.para}>App works</p>
+      <section>
+        <BeerCard />
+        <BeerCard />
+        <BeerCard />
+        <BeerCard />
+        <BeerCard />
+        <BeerCard />
+      </section>
+      
     </>
   );
 }
