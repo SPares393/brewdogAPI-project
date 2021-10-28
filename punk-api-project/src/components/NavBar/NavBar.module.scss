@@ -1,11 +1,14 @@
+@import "../../variables.scss"; 
+
 .navBar {
     padding: 15px 25px;
     display: flex;
     justify-content: space-between;
-    background-image: linear-gradient(#8f8787, #b7b7b7);
+    background-image: $background-gray;
+    border-bottom: 3px solid $colour-header;
 
     h1 {
-        color: #ffc93c;
+        color: $colour-header;
         font-size: 2rem;
     }
 
