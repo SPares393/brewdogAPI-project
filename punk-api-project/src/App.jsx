@@ -5,8 +5,10 @@ import BeerCard from './components/BeerCard/BeerCard';
 const App = () => {
   return (
     <>
-      <NavBar />
-      <section>
+      <section className={styles.NavBar}>
+        <NavBar/>
+      </section>
+      <section className={styles.BeerContainer}>
         <BeerCard />
         <BeerCard />
         <BeerCard />

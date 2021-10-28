@@ -1,3 +1,14 @@
-.para {
-    color: green;
+@import "./variables.scss";
+
+.NavBar {
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+.BeerContainer {
+    margin-top: 75px;
+    display: flex;
+    flex-wrap: wrap;
 }
