@@ -11,6 +11,10 @@
         color: $colour-header;
         margin-bottom: 10px;
         text-align: center;
+
+        .BeerCardABV {
+            font-size: 1rem;
+        }
     }
 
     .BeerCardBody {
