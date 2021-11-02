@@ -31,8 +31,7 @@ const App = () => {
           tagline={beers[2].tagline}
           description={beers[2].description}
         />
-      </section>
-      
+      </section>      
     </>
   );
 }
