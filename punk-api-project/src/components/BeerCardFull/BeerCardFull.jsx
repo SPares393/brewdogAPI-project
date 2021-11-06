@@ -4,7 +4,7 @@ import styles from './BeerCardFull.module.scss'
 const BeerCardFull = (props) => {
     return (
         <div className={styles.BeerCardFull}>
-            <h2>{props.name}</h2>
+            <h2>{props.name} <span className={styles.BeerCardABV}>({props.abv}%)</span></h2>
             <section className={styles.BeerCardBody}>
                 <img src={props.image_url} alt="Beer Image"/>
                 <section className={styles.BeerCardDescription}>
@@ -13,8 +13,8 @@ const BeerCardFull = (props) => {
                     <p>{props.description}</p>
                     <section className={styles.BeerCardInfoBox}>
                         <div className={styles.BeerCardInfo}>
-                            <p>ABV</p>
-                            <p>{props.abv}%</p>
+                            <p>PH</p>
+                            <p>{props.ph}</p>
                         </div>
                         <div className={styles.BeerCardInfo}>
                             <p>IBU</p>

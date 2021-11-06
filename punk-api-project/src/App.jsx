@@ -26,6 +26,8 @@ const App = () => {
       description={beers[0].description}
       first_brewed={beers[0].first_brewed}
       ph={beers[0].ph}
+      ibu={beers[0].ibu}
+      ebc={beers[0].ebc}
       key={beers[0].id}
     />
   }
