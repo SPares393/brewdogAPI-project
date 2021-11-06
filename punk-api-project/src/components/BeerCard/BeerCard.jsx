@@ -16,7 +16,7 @@ const BeerCard = (props) => {
             <h2>{props.name} <span className={styles.BeerCardABV}>({props.abv}%)</span></h2>
             <section className={styles.BeerCardBody}>
                 <img src={props.image_url} alt="Beer Image"/>
-                <section className={styles.BeerCardInfo}>
+                <section className={styles.BeerCardDescription}>
                     <h4>{props.tagline}</h4>
                     <p>{formatDescription(props.description)}</p>
                 </section>
