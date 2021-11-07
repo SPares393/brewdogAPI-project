@@ -7,6 +7,7 @@
     height: 300px;
     margin: 25px;
     padding: 15px 25px;
+    box-shadow: $box-shadow-primary;
 
     h2 {
         color: $colour-header;
@@ -39,3 +40,7 @@
     }
 }
 
+.BeerCard:hover {
+    transform: scale(1.05);
+    box-shadow: $box-shadow-highlight;
+}
