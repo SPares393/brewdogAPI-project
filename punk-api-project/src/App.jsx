@@ -12,6 +12,10 @@ const App = () => {
       image_url={beer.image_url}
       tagline={beer.tagline}
       description={beer.description}
+      first_brewed={beer.first_brewed}
+      ph={beer.ph}
+      ibu={beer.ibu}
+      ebc={beer.ebc}
       key={beer.id}
     />
   }

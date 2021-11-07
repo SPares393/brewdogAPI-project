@@ -19,6 +19,7 @@ const BeerCardShort = (props) => {
                 <section className={styles.BeerCardDescription}>
                     <h4>{props.tagline}</h4>
                     <p>{formatDescription(props.description)}</p>
+                    {/* <p>{props.description}</p> */}
                     <button className={styles.InfoButton}>More Info</button>
                 </section>
             </section>
