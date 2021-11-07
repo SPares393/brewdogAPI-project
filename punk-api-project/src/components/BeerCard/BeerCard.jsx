@@ -1,28 +1,20 @@
-import React from 'react';
-import styles from './BeerCard.module.scss';
+import React from 'react'
+import BeerCardShort from '../BeerCardShort/BeerCardShort'
 
 const BeerCard = (props) => {
-
-    const formatDescription = (str) => {
-        if (str.length > 200) {
-            return `${str.slice(0, 200)}...`;
-        } else {
-            return str;
-        }
-    }
-
     return (
-        <div className={styles.BeerCard}>
-            <h2>{props.name} <span className={styles.BeerCardABV}>({props.abv}%)</span></h2>
-            <section className={styles.BeerCardBody}>
-                <img src={props.image_url} alt="Beer Image"/>
-                <section className={styles.BeerCardDescription}>
-                    <h4>{props.tagline}</h4>
-                    <p>{formatDescription(props.description)}</p>
-                </section>
-            </section>
+        <div>
+            <BeerCardShort       
+                name={props.name}
+                abv={props.abv}
+                image_url={props.image_url}
+                tagline={props.tagline}
+                description={props.description}
+                key={props.id}
+            />
         </div>
     )
 }
 
-export default BeerCard;
+export default BeerCard
+

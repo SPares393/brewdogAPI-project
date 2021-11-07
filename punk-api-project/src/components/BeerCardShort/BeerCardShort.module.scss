@@ -1,0 +1,41 @@
+@import "../../variables.scss";
+
+.BeerCard {
+    background-image: $background-gray;
+    border-radius: 10px;
+    max-width: 20vw;
+    height: 300px;
+    margin: 25px;
+    padding: 15px 25px;
+
+    h2 {
+        color: $colour-header;
+        margin-bottom: 10px;
+        text-align: center;
+
+        .BeerCardABV {
+            font-size: 1rem;
+        }
+    }
+
+    .BeerCardBody {
+        display: flex;
+        align-items: center;
+    }
+
+    img {
+        max-height: 200px;
+    }
+
+    .BeerCardDescription {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        h4 {
+            margin-bottom: 10px;
+        }
+    }
+}
+
