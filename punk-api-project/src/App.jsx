@@ -1,6 +1,7 @@
 import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import BeerCard from './components/BeerCard/BeerCard';
+import BeerFilters from './components/BeerFilters/BeerFilters';
 import beers from './beers';
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
         <NavBar/>
       </section>
       <section className={styles.BeerContainer}>
+        <BeerFilters />
         {beers.map(createBeerCard)}
       </section>      
     </>
