@@ -6,18 +6,7 @@ import beers from './beers';
 const App = () => {
 
   const createBeerCard = (beer) => {
-    return <BeerCard 
-      name={beer.name}
-      abv={beer.abv}
-      image_url={beer.image_url}
-      tagline={beer.tagline}
-      description={beer.description}
-      first_brewed={beer.first_brewed}
-      ph={beer.ph}
-      ibu={beer.ibu}
-      ebc={beer.ebc}
-      key={beer.id}
-    />
+    return <BeerCard beer={beer}/>
   }
 
   return (
