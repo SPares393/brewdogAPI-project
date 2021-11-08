@@ -11,7 +11,6 @@ const BeerFilters = () => {
                 <button className={styles.FilterButton}><h3>High Acidity Beers</h3></button>
                 <button className={styles.FilterButton}><h3>Classic Range Beers</h3></button>
             </div>
-
         </div>
     )
 }

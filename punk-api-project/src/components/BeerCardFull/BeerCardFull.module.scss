@@ -3,11 +3,12 @@
 .BeerCardFull {
     background-image: $background-gray;
     border-radius: 10px;
-    width: 40vw;
+    width: 650px;
     height: 300px;
     margin: 25px;
     padding: 15px 25px;
     box-shadow: $box-shadow-primary;
+    font-size: 0.9rem;
 
     h2 {
         color: $colour-header;

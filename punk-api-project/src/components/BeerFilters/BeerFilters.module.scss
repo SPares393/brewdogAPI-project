@@ -27,11 +27,15 @@
             font-weight: bold;
             background-image: linear-gradient(#1ba7ce, #a2d6e6);
             box-shadow: $box-shadow-primary;
-
-            :hover {
-                cursor: pointer;
-                transform: scale(1.1);
-            }
         }
     }
+}
+
+.FilterButton:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.FilterButton:active {
+    transform: translateY(1px);
 }
