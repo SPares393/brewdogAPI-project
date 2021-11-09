@@ -5,10 +5,12 @@
     position: fixed;
     top:0;
     left:0;
+    z-index: 1;
 }
 
 .BeerContainer {
     margin-top: 75px;
     display: flex;
     flex-wrap: wrap;
+    z-index: 0;
 }
