@@ -7,3 +7,14 @@
     background-image: $background-gray;
     width: 100vw;
 }
+
+.GithubLink {
+    font-size: 3rem;
+    color: black;
+
+    :hover {
+        color: $colour-header;
+        cursor: pointer;
+    }
+
+}
