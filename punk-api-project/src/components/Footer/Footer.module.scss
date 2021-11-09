@@ -10,10 +10,10 @@
 
 .GithubLink {
     font-size: 3rem;
-    color: black;
+    color: $colour-header;
 
     :hover {
-        color: $colour-header;
+        color: #1ba7ce;
         cursor: pointer;
     }
 
