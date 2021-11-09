@@ -18,10 +18,12 @@
     display: flex;
     flex-wrap: wrap;
     z-index: 0;
+    min-height: 90vh;
 }
 
 .Footer {
-    position: fixed;
+    margin-top: 20px;
+    position: relative;
     left: 0;
     bottom: 0;
 }
