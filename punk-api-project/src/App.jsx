@@ -7,9 +7,10 @@ import beers from './beers';
 
 const App = () => {
   const [ listedBeers, setListedBeers ] = useState(beers)
+  const [ searchTerm, setSearchTerm ] = useState("")
 
   const createBeerCard = (beer) => {
-    return <BeerCard beer={beer}/>
+    return <BeerCard beer={beer} />
   }
 
   const filterAllBeers = () => {
@@ -28,10 +29,17 @@ const App = () => {
     setListedBeers(beers.filter(beer => beer.first_brewed.split("/")[1] <= 2010))
   }
 
+  const filterBySearch = (e) => {
+    const searchQuery = e.target.value;
+    setSearchTerm(searchQuery);
+    console.log(searchTerm);
+    setListedBeers(beers.filter(beer => beer.name.toLowerCase().includes(searchTerm.toLowerCase())))
+  }
+
   return (
     <>
       <section className={styles.NavBar}>
-        <NavBar/>
+        <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} filterBySearch={filterBySearch}/>
       </section>
       <section className={styles.BeerContainer}>
         <BeerFilters clicked={[ filterAllBeers, filterHighABV, filterHighAcidity, filterClassicRange ]}/>
