@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './BeerCardFull.module.scss'
 
 const BeerCardFull = (props) => {
-    const { name, abv, image_url, tagline, description, first_brewed, ph, ibu, ebc, id } = props.beer
+    const { name, abv, image_url, tagline, description, first_brewed, ph, ibu, ebc } = props.beer
 
     return (
         <div className={styles.BeerCardFull}>

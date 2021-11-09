@@ -10,7 +10,7 @@ const App = () => {
   const [ searchTerm, setSearchTerm ] = useState("")
 
   const createBeerCard = (beer) => {
-    return <BeerCard beer={beer} />
+    return <BeerCard beer={beer} key={beer.id} />
   }
 
   const filterAllBeers = () => {
@@ -30,10 +30,17 @@ const App = () => {
   }
 
   const filterBySearch = (e) => {
-    const searchQuery = e.target.value;
-    setSearchTerm(searchQuery);
-    console.log(searchTerm);
-    setListedBeers(beers.filter(beer => beer.name.toLowerCase().includes(searchTerm.toLowerCase())))
+    const searchQuery = async () => {
+      const query = await e.target.value;
+      setSearchTerm(query);
+      setListedBeers(
+          beers.filter((beer) =>
+              beer.name.toLowerCase().includes(query.toLowerCase())
+          )
+      );
+      console.log(query);
+    };
+    searchQuery();
   }
 
   return (
