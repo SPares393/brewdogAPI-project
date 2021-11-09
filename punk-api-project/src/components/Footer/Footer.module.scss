@@ -1,0 +1,9 @@
+@import "../../variables.scss";
+
+.Footer {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: center;
+    background-image: $background-gray;
+    width: 100vw;
+}

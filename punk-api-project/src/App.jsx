@@ -3,6 +3,7 @@ import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import BeerCard from './components/BeerCard/BeerCard';
 import BeerFilters from './components/BeerFilters/BeerFilters';
+import Footer from "./components/Footer/Footer";
 import beers from './beers';
 
 const App = () => {
@@ -44,15 +45,18 @@ const App = () => {
   }
 
   return (
-    <>
+    <body className={styles.Body}>
       <section className={styles.NavBar}>
         <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} filterBySearch={filterBySearch}/>
       </section>
       <section className={styles.BeerContainer}>
         <BeerFilters clicked={[ filterAllBeers, filterHighABV, filterHighAcidity, filterClassicRange ]}/>
         {listedBeers.map(createBeerCard)}
-      </section>      
-    </>
+      </section>    
+      <section className={styles.Footer}>
+        <Footer />
+      </section>  
+    </body>
   );
 }
 
