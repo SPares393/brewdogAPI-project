@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import BeerCard from './components/BeerCard/BeerCard';
@@ -5,9 +6,26 @@ import BeerFilters from './components/BeerFilters/BeerFilters';
 import beers from './beers';
 
 const App = () => {
+  const [ listedBeers, setListedBeers ] = useState(beers)
 
   const createBeerCard = (beer) => {
     return <BeerCard beer={beer}/>
+  }
+
+  const filterAllBeers = () => {
+    setListedBeers(beers)
+  }
+
+  const filterHighABV = () => {
+    setListedBeers(beers.filter(beer => beer.abv > 6))
+  }
+
+  const filterHighAcidity = () => {
+    setListedBeers(beers.filter(beer => beer.ph < 4))
+  }
+
+  const filterClassicRange = () => {
+    setListedBeers(beers.filter(beer => beer.first_brewed.split("/")[1] <= 2010))
   }
 
   return (
@@ -16,8 +34,8 @@ const App = () => {
         <NavBar/>
       </section>
       <section className={styles.BeerContainer}>
-        <BeerFilters />
-        {beers.map(createBeerCard)}
+        <BeerFilters clicked={[ filterAllBeers, filterHighABV, filterHighAcidity, filterClassicRange ]}/>
+        {listedBeers.map(createBeerCard)}
       </section>      
     </>
   );
