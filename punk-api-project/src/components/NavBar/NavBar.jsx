@@ -2,7 +2,7 @@ import React from 'react';
 import styles from "./NavBar.module.scss";
 
 const NavBar = (props) => {
-    const { searchTerm, setSearchTerm, filterBySearch } = props
+    const { searchTerm, filterBySearch } = props
 
     return (
         <nav className={styles.navBar}>
