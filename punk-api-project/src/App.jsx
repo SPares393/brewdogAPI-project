@@ -37,9 +37,8 @@ const App = () => {
     setListedBeers(getBeers("?abv_gt=7.5"))
   }
 
-  const filterHighAcidity = () => {
-    getBeers("?page=1&per_page=80")
-    setListedBeers(listedBeers.filter((beer) => beer.ph < 4))
+  const filterDarkBeers = () => {
+    setListedBeers(getBeers("?ebc_gt=100"))
   }
 
   const filterClassicRange = () => {
@@ -65,7 +64,7 @@ const App = () => {
       </section>
       {/* <section className={styles.blur}></section> */}
       <section className={styles.BeerContainer}>
-        <BeerFilters clicked={[ filterAllBeers, filterHighABV, filterHighAcidity, filterClassicRange ]}/>
+        <BeerFilters clicked={[ filterAllBeers, filterHighABV, filterDarkBeers, filterClassicRange ]}/>
         {listedBeers && listedBeers.map(createBeerCard)}
         <CardEnd />
       </section>    
