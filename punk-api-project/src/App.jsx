@@ -3,6 +3,7 @@ import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import BeerCard from './components/BeerCard/BeerCard';
 import BeerFilters from './components/BeerFilters/BeerFilters';
+import CardEnd from './components/CardEnd/CardEnd';
 import Footer from "./components/Footer/Footer";
 
 const App = () => {
@@ -64,6 +65,7 @@ const App = () => {
       <section className={styles.BeerContainer}>
         <BeerFilters clicked={[ filterAllBeers, filterHighABV, filterHighAcidity, filterClassicRange ]}/>
         {listedBeers && listedBeers.map(createBeerCard)}
+        <CardEnd />
       </section>    
       <section className={styles.Footer}>
         <Footer />

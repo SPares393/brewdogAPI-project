@@ -1,0 +1,31 @@
+@import "./../../variables.scss";
+
+.CardEnd {
+    background-image: $background-gray;
+    border-radius: 10px;
+    width: 375px;
+    height: 300px;
+    margin: 25px;
+    padding: 15px 25px;
+    box-shadow: $box-shadow-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h4 {
+        color: $colour-header;
+        margin-bottom: 10px;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    a {
+        color: $colour-header;
+        text-decoration: none;
+    }
+}
+
+a:hover {
+    color: #1ba7ce;
+    cursor: pointer;
+}
