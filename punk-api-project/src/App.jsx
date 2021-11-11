@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './App.module.scss';
 import NavBar from './components/NavBar/NavBar';
 import BeerCard from './components/BeerCard/BeerCard';
@@ -24,17 +24,20 @@ const App = () => {
       })
   }
 
+  useEffect(() => {
+    getBeers("")
+  }, [])
+
   const filterAllBeers = () => {
     setListedBeers(getBeers(""))
   }
 
   const filterHighABV = () => {
-    setListedBeers(getBeers("?abv_gt=6"))
+    setListedBeers(getBeers("?abv_gt=7.5"))
   }
 
   const filterHighAcidity = () => {
-    // setListedBeers(beers.filter(beer => beer.ph < 4))
-    setListedBeers(getBeers("?ph_lt=4"))
+    setListedBeers(listedBeers.filter((beer) => beer.ph < 4))
   }
 
   const filterClassicRange = () => {
@@ -46,10 +49,8 @@ const App = () => {
       const query = await e.target.value;
       setSearchTerm(query);
       setListedBeers(
-          getBeers("").filter((beer) =>
-              beer.name.toLowerCase().includes(query.toLowerCase())
-          )
-      );
+          query ? getBeers(`?beer_name=${query}`) : getBeers("")
+      )
       console.log(query);
     };
     searchQuery();

@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const Footer = () => {
     return (
         <footer className={styles.Footer}>
-            <a href="https://github.com/SPares393/brewdogAPI-project" target="_blank">            
+            <a href="https://github.com/SPares393/brewdogAPI-project" target="_blank" rel="noreferrer">            
                 <FontAwesomeIcon icon={faGithub} className={styles.GithubLink}></FontAwesomeIcon>
             </a>
         </footer>

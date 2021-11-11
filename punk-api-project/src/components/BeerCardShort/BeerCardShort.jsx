@@ -24,7 +24,7 @@ const BeerCardShort = (props) => {
         <div className={styles.BeerCard}>
             <h2>{formatName(name)} <span className={styles.BeerCardABV}>({abv}%)</span></h2>
             <section className={styles.BeerCardBody}>
-                <img src={image_url} alt="Beer Image"/>
+                <img src={image_url} alt="Beer"/>
                 <section className={styles.BeerCardDescription}>
                     <h4>{tagline}</h4>
                     <p>{formatDescription(description)}</p>
