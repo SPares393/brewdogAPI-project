@@ -34,11 +34,11 @@ const App = () => {
   }
 
   const filterHighABV = () => {
-    setListedBeers(getBeers("?abv_gt=7.5"))
+    setListedBeers(getBeers("?abv_gt=8.5"))
   }
 
   const filterDarkBeers = () => {
-    setListedBeers(getBeers("?ebc_gt=100"))
+    setListedBeers(getBeers("?ebc_gt=120"))
   }
 
   const filterClassicRange = () => {
@@ -51,18 +51,17 @@ const App = () => {
       setSearchTerm(query);
       setListedBeers(
           query ? getBeers(`?beer_name=${query}`) : getBeers("")
-      )
-      console.log(query);
-    };
+      )};
     searchQuery();
   }
 
   return (
     <div className={styles.Body}>
+      <section className={styles.blur}></section>
+      <div>
       <section className={styles.NavBar}>
         <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} filterBySearch={filterBySearch}/>
       </section>
-      {/* <section className={styles.blur}></section> */}
       <section className={styles.BeerContainer}>
         <BeerFilters clicked={[ filterAllBeers, filterHighABV, filterDarkBeers, filterClassicRange ]}/>
         {listedBeers && listedBeers.map(createBeerCard)}
@@ -70,7 +69,8 @@ const App = () => {
       </section>    
       <section className={styles.Footer}>
         <Footer />
-      </section>  
+      </section> 
+      </div> 
     </div>
   );
 }
