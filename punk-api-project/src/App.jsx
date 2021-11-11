@@ -38,6 +38,7 @@ const App = () => {
   }
 
   const filterHighAcidity = () => {
+    getBeers("?page=1&per_page=80")
     setListedBeers(listedBeers.filter((beer) => beer.ph < 4))
   }
 
@@ -62,6 +63,7 @@ const App = () => {
       <section className={styles.NavBar}>
         <NavBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} filterBySearch={filterBySearch}/>
       </section>
+      {/* <section className={styles.blur}></section> */}
       <section className={styles.BeerContainer}>
         <BeerFilters clicked={[ filterAllBeers, filterHighABV, filterHighAcidity, filterClassicRange ]}/>
         {listedBeers && listedBeers.map(createBeerCard)}

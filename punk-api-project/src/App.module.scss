@@ -7,11 +7,23 @@
 
 .NavBar {
     width: 100vw;
+    height: 75px;
     position: fixed;
     top:0;
     left:0;
     z-index: 1;
 }
+
+// .blur {
+//     width: 100vw;
+//     height: 25px;
+//     top: 75px;
+//     background-color: #eeeeee;
+//     filter: blur(5px);
+//     position: fixed;
+//     z-index: 2;
+//     opacity: 0.75;
+// }
 
 .BeerContainer {
     margin: 85px 45px 0 45px;
