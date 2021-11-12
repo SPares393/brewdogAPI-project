@@ -26,4 +26,8 @@ describe("BeerCardShort tests", () => {
         expect(component.find("img").prop("src")).toBe(testBeer.image_url);
     })
 
+    it("should display the correct ABV", () => {
+        expect(component.text()).toContain(`${testBeer.abv}%`);
+    })
+
 })

@@ -26,4 +26,11 @@ describe("BeerCardFull tests", () => {
         expect(component.find("img").prop("src")).toBe(testBeer.image_url);
     })
 
+    it("should display the correct ABV, pH, IBU, and EBC", () => {
+        expect(component.text()).toContain(`${testBeer.abv}%`);
+        expect(component.text()).toContain(testBeer.ph);
+        expect(component.text()).toContain(testBeer.ibu);
+        expect(component.text()).toContain(testBeer.ebc);
+    })
+
 })
