@@ -5,12 +5,25 @@ import beers from "../../beers";
 
 describe("BeerCardShort tests", () => {
     let component;
+    let testBeer;
 
     beforeEach(() => {
-        component = shallow(<BeerCardShort beer={beers[0]}/>);
+        testBeer = beers[0];
+        component = shallow(<BeerCardShort beer={testBeer}/>);
     })
 
     it("should render", () => {
         expect(component).toBeTruthy();
     })
+
+    it("should render the name, tagline, and description of the beer passed as props", () => {
+        expect(component.text()).toContain(testBeer.name);
+        expect(component.text()).toContain(testBeer.tagline);
+        expect(component.text()).toContain(testBeer.description);
+    })
+
+    it("should display the correct image", () => {
+        expect(component.find("img").prop("src")).toBe(testBeer.image_url);
+    })
+
 })
