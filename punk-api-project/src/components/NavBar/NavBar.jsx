@@ -8,6 +8,7 @@ const NavBar = (props) => {
         <nav className={styles.navBar}>
             <h1>#AllTheBeers</h1>
             <input 
+                className={styles.input}
                 placeholder="Search..." 
                 value={searchTerm} 
                 onChange={filterBySearch}

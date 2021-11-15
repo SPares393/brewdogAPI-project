@@ -11,7 +11,7 @@ const App = () => {
   const [ searchTerm, setSearchTerm ] = useState("")
 
   const createBeerCard = (beer) => {
-    return <BeerCard beer={beer} key={beer.id} />
+    return <BeerCard beer={beer} key={beer.id} className={styles.uniqueClass}/>
   }
 
   const getBeers = (filter) => {
